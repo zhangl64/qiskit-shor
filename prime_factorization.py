@@ -18,8 +18,13 @@ def factorize(n):
                 return i, j
     return None
 
-# Example usage
-n = 15
+# Ask the user for input instead of hard-coding
+try:
+    n = int(input("Enter an integer to factorize: "))
+except ValueError:
+    print("Please enter a valid integer.")
+    exit(1)
+    
 factors = factorize(n)
 if factors is not None:
     p1, p2 = factors
