@@ -24,7 +24,9 @@ try:
 except ValueError:
     print("Please enter a valid integer.")
     exit(1)
-    
+if is_prime(n) == True:
+    print(f"{n} is a prime number and cannot be factorized.")
+    exit(1)    
 factors = factorize(n)
 if factors is not None:
     p1, p2 = factors
